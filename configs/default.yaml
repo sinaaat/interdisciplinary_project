@@ -1,0 +1,51 @@
+project:
+  name: "field_polygon_pipeline"
+  seed: 42
+
+roi:
+  # Four ROI corners in clockwise order: top-left, top-right, bottom-right, bottom-left
+  corners:
+    - {lat: 48.197361, lon: 16.594524}
+    - {lat: 48.197361, lon: 16.628869}
+    - {lat: 48.184153, lon: 16.628869}
+    - {lat: 48.184153, lon: 16.594524}
+
+time:
+  start_date: "2019-04-01"
+  end_date: "2019-09-01"
+  step_days: 30
+
+imagery:
+  provider: "gee"
+  dataset: "COPERNICUS/S2_HARMONIZED"
+  bands: ["B4", "B3", "B2", "B8"]
+  scale_m: 10
+  cloud_threshold: 20
+  gee_project_id: "gee-image-retrieval"
+
+paths:
+  raw_dir: "data/raw"
+  masks_dir: "data/masks"
+  vectors_dir: "data/vectors"
+  reports_dir: "data/reports"
+
+segmentation:
+  method: "ndvi_threshold"
+  ndvi:
+    threshold: 0.30
+    thresholds: []
+  sam:
+    enabled: false
+    model_type: "vit_h"
+    checkpoint: "sam_vit_h_4b8939.pth"
+
+postprocessing:
+  min_area_px: 150
+  morphology_kernel: 3
+  close_iterations: 1
+  fill_holes: true
+
+export:
+  format: "geojson"
+  target_crs: "EPSG:4326"
+  simplify_tolerance_m: 0.0
