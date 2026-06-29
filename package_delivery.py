@@ -138,6 +138,11 @@ def assemble_delivery() -> None:
         shutil.copy2(ROOT / "README.md", DELIVERY / "README.md")
     if (ROOT / "docs" / "final_report_draft.md").exists():
         shutil.copy2(ROOT / "docs" / "final_report_draft.md", DELIVERY / "final_report_draft.md")
+    # Final report in all available formats (md / docx / pdf).
+    for ext in ("md", "docx", "pdf"):
+        src = ROOT / "docs" / f"final_report.{ext}"
+        if src.exists():
+            shutil.copy2(src, DELIVERY / f"final_report.{ext}")
     print(f"  assembled -> {DELIVERY}")
 
 
