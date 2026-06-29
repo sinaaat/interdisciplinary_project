@@ -3,6 +3,12 @@ __pycache__/
 *.pyc
 .env
 sam_vit_h_4b8939.pth
+
+# Regenerable pipeline intermediates (final deliverables under outputs/ are kept)
+outputs/work/
+
+# Regenerable bundle zip (duplicates tracked outputs/; rebuild with: python package_delivery.py --zip)
+outputs/final_delivery.zip
 #data/raw/
 #data/masks/
 #data/reports/

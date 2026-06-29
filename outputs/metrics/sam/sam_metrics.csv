@@ -1,0 +1,2 @@
+method,runtime_s,coverage_pct,edge_density,polygon_count,total_area_m2,mean_area_m2,median_area_m2,small_fragment_count,fragmentation_score,valid_polygon_pct,invalid_geometry_count,raw_segments,iou_vs_ndvi,iou_vs_otsu,iou_vs_ndvi_morph
+sam,214.1444,70.1131,0.2514,33,2789100.0,84518.18,48300.0,0,0.0,100.0,0,72,0.5497,0.2024,0.5541
