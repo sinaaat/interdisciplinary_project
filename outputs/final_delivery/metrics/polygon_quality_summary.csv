@@ -1,0 +1,13 @@
+metric,value
+final_method,ndvi
+final_feature_count,18
+polygon_count_unfiltered,23
+total_area_m2,2167800.0
+mean_area_m2,94252.17
+median_area_m2,26100.0
+small_fragment_count,5
+fragmentation_score,0.2174
+valid_polygon_pct,82.61
+invalid_geometry_count,4
+coverage_pct,59.9246
+edge_density,0.4024

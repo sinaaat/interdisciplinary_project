@@ -1,0 +1,5 @@
+method,runtime_s,coverage_pct,edge_density,polygon_count,total_area_m2,mean_area_m2,median_area_m2,small_fragment_count,fragmentation_score,valid_polygon_pct,invalid_geometry_count,role,iou_vs_ndvi,iou_vs_otsu,iou_vs_ndvi_morph,iou_vs_sam
+ndvi,0.1382,59.9246,0.4024,23,2167800.0,94252.17,26100.0,5,0.2174,82.61,4,classical_final,,0.0514,0.9651,0.5497
+otsu,0.0817,24.3188,0.7536,27,872600.0,32318.52,10000.0,15,0.5556,92.59,2,classical,0.0514,,0.0552,0.2024
+ndvi_morph,0.0582,61.1916,0.3131,21,2242200.0,106771.43,32300.0,7,0.3333,90.48,2,classical,0.9651,0.0552,,0.5541
+sam,214.1444,70.1131,0.2514,33,2789100.0,84518.18,48300.0,0,0.0,100.0,0,sam_experimental,0.5497,0.2024,0.5541,
